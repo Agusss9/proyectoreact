@@ -26,4 +26,35 @@
                     .categories li:hover {
                         color: white;
                     }
-                
+
+.item-list-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.item-list-container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio inferior entre los elementos */
+    border: 1px solid #ddd; /* Borde opcional para cada producto */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Para evitar que las imágenes se desborden */
+    width: calc(33% - 20px); /* Ajustar el ancho para que tres productos quepan en una fila */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para dar profundidad */
+}
+
+.item-list-container img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-bottom: 1px solid #ddd; /* Borde inferior entre la imagen y el texto */
+}
+
+.item-list-container span {
+    padding: 10px; /* Espacio alrededor del texto */
+    font-weight: bold; /* Hacer el texto más destacado */
+    text-align: center; /* Centrar el texto */
+    display: block; /* Hacer que el span ocupe todo el ancho */
+}
