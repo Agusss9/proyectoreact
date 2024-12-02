@@ -1,21 +1,21 @@
+// src/components/NavBar.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget';
+import './Navbar.css';
 
-                    import React from 'react';
-                    import CartWidget from './CartWidget';
-                    import './Navbar.css';
+function NavBar() {
+    return (
+        <nav className="navbar">
+            <Link to="/" className="brand">Elite Motors</Link>
+            <ul className="categories">
+                <li><Link to="/category/1">Lamborghini</Link></li>
+                <li><Link to="/category/2">BMW</Link></li>
+                <li><Link to="/category/3">McLaren</Link></li>
+            </ul>
+            <CartWidget />
+        </nav>
+    );
+}
 
-                    function NavBar() {
-                        return (
-                            <nav className="navbar">
-                                <h1>Nombre de la Tienda</h1>
-                                <ul className="categories">
-                                    <li>Categoría 1</li>
-                                    <li>Categoría 2</li>
-                                    <li>Categoría 3</li>
-                                </ul>
-                                <CartWidget />
-                            </nav>
-                        );
-                    }
-
-                    export default NavBar;
-                
+export default NavBar;
