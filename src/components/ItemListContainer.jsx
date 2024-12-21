@@ -14,7 +14,7 @@ const fetchProductsByCategory = (categoryId) => {
     return allProducts.filter(product => product.category === parseInt(categoryId));
 };
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
     const { id: categoryId } = useParams();
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -32,9 +32,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <div className="item-list-container">
-            <h2>{greeting}</h2>
-            <p>Explora nuestra increíble selección de autos de lujo. ¡Encuentra el auto de tus sueños!</p>
-            <img src="https://lh3.googleusercontent.com/gg/ACM6BIsPgffqTIn8Iozsh1Z3CdFu4cc770D1zpxmwEqGoGqANEkzE3bJKO6zQBcTXCT0NMTruDot522V647d7jEZEWPEz_gnixQEO-XuLiAnEVi3qPJ2-d0lfcSAJIKqvJrn8erpRK9VVsDqCWfbRlyQ1URtErfDsuhc_B9IcWAZRTlpJ_Z0Dtk=s1024" alt="Imagen de bienvenida" style={{ maxWidth: '15%', height: 'auto', marginBottom: '20px', marginLeft: "800px" }} />            <ul>
+            <ul>
                 {products.map(product => (
                     <li key={product.id}>
                         <Link to={`/item/${product.id}`}>
