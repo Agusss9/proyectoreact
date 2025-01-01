@@ -10,7 +10,7 @@ const AddItemButton = ({ product }) => {
         alert(`${product.name} ha sido agregado al carrito!`); // Mensaje de confirmación
     };
 
-    return <button onClick={handleAddToCart}>Add to Cart</button>;
+    return <button onClick={handleAddToCart}>Agregar al Carrito</button>;
 };
 
 export default AddItemButton;

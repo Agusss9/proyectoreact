@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import Checkout from './components/Checkout'; // Asegúrate de que este componente esté importado
+import Checkout from './components/Checkout';
 import Welcome from './components/Welcome';
+import CartPage from './components/CartPage'; // Importa la nueva página del carrito
 import { CartProvider } from './context/CartContext';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -19,7 +20,8 @@ const App = () => {
                     <Route path="/" element={<><Welcome /><ItemListContainer greeting="¡Bienvenido a nuestra tienda!" /></>} />
                     <Route path="/category/:id" element={<ItemListContainer />} />
                     <Route path="/item/:id" element={<ItemDetailContainer />} />
-                    <Route path="/checkout" element={<Checkout />} /> {/* Ruta para el Checkout */}
+                    <Route path="/cart" element={<CartPage />} /> {/* Ruta para el carrito */}
+                    <Route path="/checkout" element={<Checkout />} />
                 </Routes>
             </Router>
         </CartProvider>

@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "proyectoreact"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "proyectoreact-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

@@ -1,14 +1,15 @@
+// src/components/CartWidget.jsx
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-                    import React from 'react';
-                    import { CartContext } from '../context/CartContext';
+const CartWidget = () => {
+    const { cartItems } = useContext(CartContext);
 
-                    function CartWidget() {
-                        return (
-                            <div className="cart-widget">
-                                🛒 <span>3</span>
-                            </div>
-                        );
-                    }
+    return (
+        <div className="cart-widget">
+            🛒 <span>{cartItems.length}</span>
+        </div>
+    );
+};
 
-                    export default CartWidget;
-                
+export default CartWidget;
