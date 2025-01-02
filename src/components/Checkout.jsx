@@ -3,11 +3,12 @@ import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
 const Checkout = () => {
-    const { cartItems } = useContext(CartContext);
+    const { cartItems, clearCart } = useContext(CartContext);
 
     const handleCheckout = () => {
         // Lógica para procesar el pago o finalizar la compra
         alert('Compra finalizada!');
+        clearCart(); // Limpiar el carrito después de la compra
     };
 
     return (
